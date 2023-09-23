@@ -34,8 +34,6 @@ paper.addEventListener('click', () => {
             break;
             case 1:
                 humanScore++;
-                case 2:
-                    break
         default:
             break;
     }
