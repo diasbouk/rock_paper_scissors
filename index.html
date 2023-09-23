@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -12,30 +11,53 @@
     <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/js/all.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-dark">
+<body>
     <!-- Head of page .-->
     <nav class="navbar bg-warning">
         <div class="container-fluid">
           <form class="d-flex" role="search">
-            <h1 class="fs-1 txt text-dark me-5 font-effect-fire">Rock Paper Scissors</h1>
+            <h1 class="fs-1 txt text-dark me-5">Rock Paper Scissors</h1>
             <i class="fa-solid fa-puzzle-piece fs-1 me-4"></i>
             </form>
         </div>
       </nav>
-      <h1 class="fs-1 txt text-dark me-5 font-effect-fire form-check-inline">Its you against AI</h1>
+      <h1 class="fs-1 text-warning me-5 text-center">Its you against AI</h1>
       <i class="fa-solid fa-gun fs-1 rounded"></i>
       <h2>Pick your move</h2>
 
     <div class="d-flex justify-content-around border border-5 p-3 m-3">
-        <button class="btn btn-outline-warning btn-lg">
+        <button id="rock" class="btn btn-outline-warning btn-lg">
             <i class="fa-regular fa-hand-back-fist"></i>
         </button>
-        <button class="btn btn-outline-warning btn-lg">
+        <button id="scissors" class="btn btn-outline-warning btn-lg">
             <i class="fa-regular fa-hand-scissors"></i>
         </button>
-        <button class="btn btn-outline-warning btn-lg">
+        <button id="paper" class="btn btn-outline-warning btn-lg">
             <i class="fa-sharp fa-regular fa-hand"></i>
         </button>
+    </div>
+
+    <!-- A div for results and score-->
+    <div class="border p-3 border-5">
+        <p class="text text-warning text-center fw-bold">the Board</p>
+        <div class="justify-content-around d-flex">
+            <div class="card">
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p class="text text-center">Human</p>
+                    <p class="text text-center" id="humanScore">0</p>
+                </div>
+            </div>
+
+            <div class="card pe-4 ps-4">
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p class="text text-center">AI</p>
+                    <p class="text text-center" id="AiScore">0</p>
+                </div>
+            </div>
+
+        </div>
     </div>
     <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
