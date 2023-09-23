@@ -1,6 +1,4 @@
 
-for (let i = 0; i <= 5; i++) {
-
     let getComputerChoice = function() {
     let randomNumber = Math.floor(Math.random() * 3);
     switch(randomNumber){
@@ -15,7 +13,7 @@ for (let i = 0; i <= 5; i++) {
     }
 }
 let computerSelection = getComputerChoice();
-let playerSelection = window.prompt("pick your move");
+let playerSelection = 'rock' //window.prompt("pick your move");
 
 
     function playRound(playerSelection, computerSelection) {
@@ -57,6 +55,3 @@ let playerSelection = window.prompt("pick your move");
 }
 
 console.log(playRound(playerSelection, computerSelection));
-
-    
-}
