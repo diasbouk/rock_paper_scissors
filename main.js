@@ -105,6 +105,6 @@ function paper() {
 }
 function scissors() {
     playerSelection = 'scissors';
-    document.getElementById('playerImg').src="./imgs/scissors1.svg"
+    document.getElementById('playerImg').src="./imgs/scissors1.png"
     gamePlay();
 }
