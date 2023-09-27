@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
+    
+</head>
+<body>
     <!-- Header code -->
     <div class="header">
         <img height="120px" src="./imgs/logo.png" alt="LOGO">
@@ -20,7 +23,7 @@
         <div class="score">
             <h3>You : 0</h3>
         </div>
-        <img height="200px" src="./imgs/rock.svg" alt="rock">
+        <img id="playerImg" height="200px" src="" alt="">
     </div>
 
     <!-- Computer -->
@@ -28,24 +31,20 @@
         <div class="score">
             <h3>Computer: 0</h3>
         </div>
-        <img src="./imgs/1567334-200.png" alt="paper">
+        <img id="computerImg" src="" alt="">
     </div>
     </div>
 
     <!-- Choices -->
     <div class="choices">
-        <a href="">
-            <img id="rockImg" class="choice" height="80px" src="./imgs/rock.svg" alt="rock">
-            </a>
-            <a href="">
-                <img id="paperImg" class="choice" height="80px" src="./imgs/1567334-200.png" alt="">
-            </a>
-            <a href="">
-                <img id="scissorsImg" class="choice" height="80px" src="./imgs/scissors.svg" alt="">
-            </a>
+            <img onclick="rock()" id="rockImg" class="choice" height="80px" src="./imgs/rock1.png" alt="rock">
+
+            <img onclick="paper()" id="paperImg" class="choice" height="80px" src="./imgs/paper1.png" alt="paper">
+
+            <img onclick="scissors()" id="scissorsImg" class="choice" height="80px" src="./imgs/scissors1.svg" alt="scissors">
     </div>
-</head>
-<body>
-    
+
+    <!-- Script  link -->
+    <script src="main.js"></script>
 </body>
 </html>

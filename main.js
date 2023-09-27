@@ -57,10 +57,54 @@ let playerSelection; //window.prompt("pick your move");
         }
     }
 }
-
 console.log(playRound(playerSelection, computerSelection));
+
+// Declaring img changers
+let rockImg = document.getElementById('rockImg');
+let paperImg = document.getElementById('paperImg');
+let scissorsImg = document.getElementById('scissorsImg');
+
+
+// function to change choices
+
+function choiceChange() 
+{
+    switch (computerSelection) 
+    {
+        case 'rock' :
+            document.getElementById('computerImg').src="./imgs/rock2.png";
+            break
+        case 'paper' :
+            document.getElementById('computerImg').src="./imgs/paper2.png";
+            break;
+        case 'scissors' :
+            document.getElementById('computerImg').src="./imgs/scissors2.png";
+            break;
+            default:
+                break;
+    }
+}
 
 // Function to play rounds
 function gamePlay() {
     computerSelection = getComputerChoice();
+    choiceChange();
+    console.log(playRound(playerSelection, computerSelection));
+}
+
+// Player choice handling
+function rock() {
+    playerSelection = 'rock';
+    document.getElementById('playerImg').src="./imgs/rock1.png"
+    gamePlay();
+}
+function paper() {
+    playerSelection = 'paper';
+    document.getElementById('playerImg').src="./imgs/paper1.png"
+    gamePlay();
+}
+function scissors() {
+    playerSelection = 'scissors';
+    document.getElementById('playerImg').src="./imgs/scissors1.svg"
+    gamePlay();
 }

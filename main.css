@@ -27,10 +27,14 @@ h1 {
     border-radius: 10px;
     margin: 30px;
     padding: 12px;
+    height: 80px;
 }
 
 .score {
     font-family: 'Black Ops One';
     font-size: x-large;
     color: burlywood;
+}
+img {
+    height: 300px;
 }
