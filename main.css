@@ -1,9 +1,36 @@
-body
-{
-    font-family: "Sofia", sans-serif;
-    background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Croissant+One&display=swap');
+.header {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Black Ops One', cursive;
+    margin-left: 0px;
+    overflow: hidden;
+    width: 100%;
+    background-color: gray;
 }
-h1
-{
-    font-family: "Sofia", sans-serif;
+h1 {
+    margin-right: 30%;
+    padding-top: 2%;
+}
+.game {
+    padding: 40px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+.choices {
+    padding: 10%;
+    text-align: center;
+}
+.choice {
+    border: 7px solid bisque;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 12px;
+}
+
+.score {
+    font-family: 'Black Ops One';
+    font-size: x-large;
+    color: burlywood;
 }

@@ -1,4 +1,7 @@
+// Rock Paper Scissors Script
 
+
+// Function to generate computer selection
     let getComputerChoice = function() {
     let randomNumber = Math.floor(Math.random() * 3);
     switch(randomNumber){
@@ -12,10 +15,11 @@
             break;
     }
 }
-let computerSelection = getComputerChoice();
-let playerSelection = 'rock' //window.prompt("pick your move");
+// Declaring playerSelection and computerSelection
+let computerSelection;
+let playerSelection; //window.prompt("pick your move");
 
-
+// function to play a round
     function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'rock') {
         if (computerSelection == 'rock') {
@@ -55,3 +59,8 @@ let playerSelection = 'rock' //window.prompt("pick your move");
 }
 
 console.log(playRound(playerSelection, computerSelection));
+
+// Function to play rounds
+function gamePlay() {
+    computerSelection = getComputerChoice();
+}
