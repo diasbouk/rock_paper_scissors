@@ -13,13 +13,13 @@ h1 {
     padding-top: 2%;
 }
 .game {
-    padding: 40px;
+    padding: 20px;
     margin-top: 80px;
     display: flex;
     justify-content: space-around;
 }
 .choices {
-    padding: 10%;
+    padding: 1%;
     text-align: center;
 }
 .choice {
@@ -31,10 +31,52 @@ h1 {
 }
 
 .score {
+    margin-left: 22%;
     font-family: 'Black Ops One';
     font-size: x-large;
     color: burlywood;
 }
 img {
     height: 300px;
+}
+
+.whowon {
+    text-align: center;
+    padding: 2%;
+    font-family: 'Black Ops One', cursive;
+    font-size: xx-large;
+}
+
+.ifplayerwins {
+    display: none;
+    flex-direction: column;
+    padding: 10%;
+    text-align: center;
+    font-family: 'Black Ops One', cursive;
+    font-size: xx-large;
+    color:burlywood;
+}
+
+.ifcomputerwins {
+    display: none;
+    flex-direction: column;
+    padding: 10%;
+    text-align: center;
+    font-family: 'Black Ops One', cursive;
+    font-size: xx-large;
+    color:burlywood;
+}
+.rick {
+    width: 400px;
+    height: 400px;
+    margin-left: 20%;
+}
+
+button {
+    padding: 10%;
+    font-size: xx-large;
+    font-family:'Black Ops One', cursive;
+    border: none;
+    border-radius: 12px;
+    background-color: burlywood;
 }

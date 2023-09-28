@@ -26,10 +26,10 @@ let playerSelection; //window.prompt("pick your move");
             return 'Tie';
         }
         else if (computerSelection == 'paper') {
-            return 'You lost !';
+            return 'You lost';
         }
         else if (computerSelection == 'scissors') {
-            return 'You won !!';
+            return 'You won';
         }
         else return 'Error';
     }
@@ -41,7 +41,7 @@ let playerSelection; //window.prompt("pick your move");
             return 'Tie';
         }
         else if (computerSelection == 'scissors') {
-            return 'You Lost!!';
+            return 'You lost';
         }
     }
 
@@ -85,11 +85,80 @@ function choiceChange()
     }
 }
 
+
+// Handle winner , playerScore and computerScore
+let whoWins;
+let playerScore = 0;
+let computerScore = 0;
+function whoWon()
+{
+    switch (playRound(playerSelection, computerSelection))
+    {
+        case 'Tie':
+            whoWins = 'No One won, Its a tie.';
+            document.querySelector('#winScore').style.color = "burlywood";
+            break;
+        case 'You won' :
+            whoWins = 'You won !!';
+            playerScore++;
+            document.querySelector('#winScore').style.color = "green";
+            break;
+        case 'You lost' :
+            whoWins = 'You lost, computer wins !';
+            computerScore++;
+            document.querySelector('#winScore').style.color = "red";
+            break;
+        default :
+            break;
+    }
+    document.querySelector('#playerScore').innerHTML = playerScore;
+    document.querySelector('#computerScore').innerHTML = computerScore;
+    document.querySelector('#winScore').innerHTML = whoWins;
+    console.log(whoWins);
+}
+
+
+// Handle five rounds
+// creating new page if player wins
+function ifPlayerWins ()
+{
+document.querySelector('#container').style.display = "none";
+document.querySelector('#ifPlayerWins').style.display = 'flex';
+}
+
+// creating new page if computer wins
+function ifComputerWins ()
+{
+document.querySelector('#container').style.display = "none";
+document.querySelector('#ifComputerWins').style.display = 'flex';
+}
+
+
+
+// function to change elements based on winner .
+function fiveRounds ()
+{
+    if (playerScore == 5)
+    {
+        setTimeout(() => {
+        ifPlayerWins();
+        }, 2000);
+    }
+    else if (computerScore == 5)
+    {
+        setTimeout(() => {
+            ifComputerWins();
+        }, 2000);
+    }
+}
+
+
 // Function to play rounds
 function gamePlay() {
     computerSelection = getComputerChoice();
     choiceChange();
-    console.log(playRound(playerSelection, computerSelection));
+    whoWon();
+    fiveRounds();
 }
 
 // Player choice handling

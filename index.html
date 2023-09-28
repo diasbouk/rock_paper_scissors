@@ -14,14 +14,19 @@
         <h1>Rock Paper Scissors</h1>
     </div>
 
+    <!-- div for all game -->
+    <div class="container" id="container">
+
 
     <!-- Game body -->
-    <div class="game">
+    <!-- normal mode -->
+    <div id="game" class="game">
 
         <!-- Player -->
     <div class="player">
         <div class="score">
-            <h3>You : 0</h3>
+            <h3>You :</h3>
+            <h3 id="playerScore"></h3>
         </div>
         <img id="playerImg" height="100px" src="" alt="">
     </div>
@@ -29,11 +34,16 @@
     <!-- Computer -->
     <div class="player">
         <div class="score">
-            <h3>Computer: 0</h3>
+            <h3>Computer :</h3>
+            <h3 id="computerScore"></h3>
         </div>
         <img id="computerImg" src="" alt="">
     </div>
     </div>
+
+        <div class="results">
+            <h2 class="whowon" id="winScore"></h2>
+        </div>
 
     <!-- Choices -->
     <div class="choices">
@@ -42,6 +52,23 @@
             <img onclick="paper()" id="paperImg" class="choice" height="80px" src="./imgs/paper1.png" alt="paper">
 
             <img onclick="scissors()" id="scissorsImg" class="choice" height="80px" src="./imgs/scissors1.png" alt="scissors">
+    </div>
+    </div>
+
+    <!-- if player wins this content shows up -->
+    <div id="ifPlayerWins" class="ifplayerwins">
+        <h3>Congratulations , You just won the game !!</h3>
+        <img class="rick" src="./imgs/happyRick.png" alt="rick is proud of you">
+        <h4>Wanna play again ?</h4>
+        <button onclick="location.reload()">click Me !</button>
+    </div>
+
+    <!-- if computer wins this one shows up -->
+    <div id="ifComputerWins" class="ifcomputerwins">
+        <h3>Sadly, You lost ...</h3>
+        <img class="rick" src="./imgs/sadRick.png" alt="rick is proud of you">
+        <h4>Wanna play again and revenche ?</h4>
+        <button onclick="location.reload()">click Me !</button>
     </div>
 
     <!-- Script  link -->
