@@ -3,62 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.min.css">
-    <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css">
-    <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/js/all.min.js">
-    <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/js/all.js">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    
 </head>
 <body>
-    <!-- Head of page .-->
-    <nav class="navbar bg-warning">
-        <div class="container-fluid">
-          <form class="d-flex" role="search">
-            <h1 class="fs-1 txt text-dark me-5">Rock Paper Scissors</h1>
-            <i class="fa-solid fa-puzzle-piece fs-1 me-4"></i>
-            </form>
-        </div>
-      </nav>
-      <h1 class="fs-1 text-warning me-5 text-center">Its you against AI</h1>
-      <h2 class="text text-center">Pick your move</h2>
-
-    <div class="d-flex justify-content-around border border-5 p-3 m-3">
-        <button id="rock" class="btn btn-outline-warning btn-lg">
-            <i class="fa-regular fa-hand-back-fist"></i>
-        </button>
-        <button id="scissors" class="btn btn-outline-warning btn-lg">
-            <i class="fa-regular fa-hand-scissors"></i>
-        </button>
-        <button id="paper" class="btn btn-outline-warning btn-lg">
-            <i class="fa-sharp fa-regular fa-hand"></i>
-        </button>
+    <!-- Header code -->
+    <div class="header">
+        <img height="100px" src="./imgs/logo.png" alt="LOGO">
+        <h1>Rock Paper Scissors</h1>
     </div>
 
-    <!-- A div for results and score-->
-    <div class="border p-3 border-5">
-        <p class="text text-warning text-center fw-bold">the Board</p>
-        <div class="justify-content-around d-flex">
-            <div class="card">
-                <div class="card-body">
-                  <blockquote class="blockquote mb-0">
-                    <p class="text text-center">Human</p>
-                    <p class="text text-center" id="humanScore">0</p>
-                </div>
-            </div>
+    <!-- div for all game -->
+    <div class="container" id="container">
 
-            <div class="card pe-4 ps-4">
-                <div class="card-body">
-                  <blockquote class="blockquote mb-0">
-                    <p class="text text-center">AI</p>
-                    <p class="text text-center" id="AiScore">0</p>
-                </div>
-            </div>
 
+    <!-- Game body -->
+    <!-- normal mode -->
+    <div id="game" class="game">
+
+        <!-- Player -->
+    <div class="player">
+        <div class="score">
+            <h3>You :</h3>
+            <h3 id="playerScore"></h3>
         </div>
+        <img id="playerImg" height="100px" src="" alt="">
     </div>
+
+    <!-- Computer -->
+    <div class="player">
+        <div class="score">
+            <h3>Computer :</h3>
+            <h3 id="computerScore"></h3>
+        </div>
+        <img id="computerImg" src="" alt="">
+    </div>
+    </div>
+
+        <div class="results">
+            <h2 class="whowon" id="winScore"></h2>
+        </div>
+
+    <!-- Choices -->
+    <div class="choices">
+            <img onclick="rock()" id="rockImg" class="choice" height="130px" src="./imgs/rock1.png"  alt="rock">
+
+            <img onclick="paper()" id="paperImg" class="choice" height="80px" src="./imgs/paper1.png" alt="paper">
+
+            <img onclick="scissors()" id="scissorsImg" class="choice" height="80px" src="./imgs/scissors1.png" alt="scissors">
+    </div>
+    </div>
+
+    <!-- if player wins this content shows up -->
+    <div id="ifPlayerWins" class="ifplayerwins">
+        <h3>Congratulations , You just won the game !!</h3>
+        <img class="rick" src="./imgs/happyRick.png" alt="rick is proud of you">
+        <h4>Wanna play again ?</h4>
+        <button onclick="location.reload()">click Me !</button>
+    </div>
+
+    <!-- if computer wins this one shows up -->
+    <div id="ifComputerWins" class="ifcomputerwins">
+        <h3>Sadly, You lost ...</h3>
+        <img class="rick" src="./imgs/sadRick.png" alt="rick is proud of you">
+        <h4>Wanna play again and revenche ?</h4>
+        <button onclick="location.reload()">click Me !</button>
+    </div>
+
+    <!-- Script  link -->
     <script src="main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
