@@ -142,13 +142,13 @@ function fiveRounds ()
     {
         setTimeout(() => {
         ifPlayerWins();
-        }, 2000);
+        }, 1000);
     }
     else if (computerScore == 5)
     {
         setTimeout(() => {
             ifComputerWins();
-        }, 2000);
+        }, 1000);
     }
 }
 
