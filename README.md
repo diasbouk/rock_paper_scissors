@@ -6,5 +6,4 @@
     The first to score five points win the game.
 
 # Live preview
-    soon ...
-    
+https://diasbouk.github.io/rock_paper_scissors/
